@@ -2,10 +2,26 @@ package main
 
 import "fmt"
 
-func Hello(n string) string {
-	return "Hello, " + n + "!"
+const englishHelloPrefix = "Hello, "
+const spanishHelloPrefix = "Hola, "
+
+func Hello(n string, l string) string {
+	var helloPrefix string
+
+	switch l {
+	case "es":
+		helloPrefix = spanishHelloPrefix
+	default:
+		helloPrefix = englishHelloPrefix
+	}
+
+	if n == "" {
+		n = "World"
+	}
+
+	return helloPrefix + n + "!"
 }
 
 func main() {
-	fmt.Println(Hello("Dante"))
+	fmt.Println(Hello("Dante", "en"))
 }
