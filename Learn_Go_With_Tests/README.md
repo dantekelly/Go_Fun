@@ -13,3 +13,7 @@ You must have installed GO to run the project code.
 Running the code: `go run hello`
 
 Testing the code: `go test`
+
+Get coverage of tests: `got test -cover`
+
+Benchmark code: `go test -bench=.`
