@@ -17,3 +17,6 @@ Testing the code: `go test`
 Get coverage of tests: `got test -cover`
 
 Benchmark code: `go test -bench=.`
+
+Add program to module
+`go mod init programName`
